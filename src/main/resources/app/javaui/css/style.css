@@ -1,0 +1,30 @@
+.header{
+    -fx-background-color: #fff;
+    -fx-background-radius: 12 12 0 0;
+}
+
+.footer {
+    -fx-background-color: #fff;
+    -fx-background-radius: 0 0 12 12;
+}
+
+.app-btn{
+    -fx-background-color: #ddd;
+    -fx-background-radius: 25px;
+}
+
+.scroll-bar{
+    visibility: hidden;
+}
+.scroll-pane .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+
+.app-btn:hover{
+    -fx-opacity: 0.6;
+}
+
+.text-field{
+    -fx-background-radius: 25;
+}

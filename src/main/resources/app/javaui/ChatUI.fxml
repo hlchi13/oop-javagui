@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.javaui.Controller.ChatUIController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="325.0">
+         <top>
+            <Pane prefHeight="85.0" prefWidth="325.0" styleClass="header" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="69.0" fitWidth="71.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/avatar.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="83.0" layoutY="11.0" prefHeight="30.0" prefWidth="81.0" text="My Dieu">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="51.0" prefHeight="20.0" prefWidth="43.0" text="Online">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="261.0" layoutY="26.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="app-btn">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-video-message-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="209.0" layoutY="26.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="app-btn">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-call-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Circle fill="#23ff1f" layoutX="88.0" layoutY="61.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane prefHeight="99.0" prefWidth="325.0" styleClass="footer" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="typeBox" layoutX="61.0" layoutY="19.0" prefHeight="43.0" prefWidth="156.0" promptText=" Send Message" stylesheets="@css/style.css" />
+                  <Button layoutX="8.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="app-btn" stylesheets="@css/style.css">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-image-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="275.0" layoutY="21.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="app-btn">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-add-record-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="225.0" layoutY="20.0" mnemonicParsing="false" onAction="#getText" prefHeight="40.0" prefWidth="40.0" styleClass="app-btn">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-send-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <ScrollPane fx:id="container" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox fx:id="vBoxMess" prefHeight="410.0" prefWidth="319.0" />
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
